@@ -134,7 +134,7 @@ class GLTFCurveExtension {
   }
 
   convertBlenderToThreeCoordinates(coord) {
-    return new THREE.Vector3(coord[0], coord[2], -coord[1]);
+    return new THREE.Vector3(coord[0], coord[1], coord[2]);
   }
 
   applyNodeTransform(object, nodeDef) {

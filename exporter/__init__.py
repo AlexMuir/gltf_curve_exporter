@@ -124,8 +124,9 @@ class glTF2ExportUserExtension:
             "dimensions": curve_data.dimensions
         }
 
+    # Export using Y up, in standard glTF co-ords
     def convert_vector_to_list(self, vector):
-        return [vector.x, vector.y, vector.z]
+        return [vector.x, vector.z, -vector.y]
 
 def register():
     logger.info("Registering Curve Exporter Extension")
